@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Iram 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating background hearts -->
+  <div id="bg-hearts" aria-hidden="true"></div>
+
+  <!-- Magic glow overlay -->
+  <div class="glow-overlay" aria-hidden="true"></div>
+
+  <!-- Tap hint -->
+  <div class="hint" id="hint">
+    <span>✨ Tap the envelope to begin ✨</span>
+  </div>
+
+  <!-- ===== SCENE ===== -->
+  <div class="scene" id="scene">
+
+    <!-- ENVELOPE -->
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope">
+        <!-- Back panel -->
+        <div class="env-back"></div>
+
+        <!-- Left flap -->
+        <div class="env-flap env-flap--left"></div>
+        <!-- Right flap -->
+        <div class="env-flap env-flap--right"></div>
+        <!-- Bottom flap -->
+        <div class="env-flap env-flap--bottom"></div>
+
+        <!-- Top flap (opens) -->
+        <div class="env-flap env-flap--top" id="envFlapTop">
+          <div class="flap-inner"></div>
+        </div>
+
+        <!-- Seal -->
+        <div class="env-seal" id="envSeal">💖</div>
+
+        <!-- Card peeking out -->
+        <div class="card-peek" id="cardPeek"></div>
+      </div>
+    </div>
+
+    <!-- GREETING CARD -->
+    <div class="card-scene" id="cardScene" aria-hidden="true">
+      <div class="card-book" id="cardBook">
+
+        <!-- FACE 4 — Back (visible when card is closed from behind) -->
+        <div class="card-page page-back">
+          <div class="page-back-content">
+            <p class="by-text">By Jo</p>
+            <div class="back-hearts" aria-hidden="true">💕</div>
+          </div>
+        </div>
+
+        <!-- FACE 1 — Front Cover -->
+        <div class="card-page page-front" id="pageFront">
+          <div class="page-front-content">
+            <div class="front-petals" aria-hidden="true"></div>
+            <p class="happy">Happy</p>
+            <p class="birthday">Birthday</p>
+            <p class="name">Iram</p>
+            <div class="front-deco" aria-hidden="true">
+              <span>🌸</span><span>✨</span><span>🌸</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- INNER SPREAD — Face 2 (left) + Face 3 (right) -->
+        <div class="card-page page-inner" id="pageInner">
+          <!-- Left inner page: cake -->
+          <div class="inner-left">
+            <div class="cake-wrap" id="cakeWrap">
+              <div class="cake">
+                <!-- Candles -->
+                <div class="candles">
+                  <div class="candle"><div class="flame"><div class="flame-inner"></div></div></div>
+                  <div class="candle"><div class="flame"><div class="flame-inner"></div></div></div>
+                  <div class="candle"><div class="flame"><div class="flame-inner"></div></div></div>
+                  <div class="candle"><div class="flame"><div class="flame-inner"></div></div></div>
+                  <div class="candle"><div class="flame"><div class="flame-inner"></div></div></div>
+                </div>
+                <!-- Tiers -->
+                <div class="cake-tier tier-top">
+                  <div class="frosting"></div>
+                  <div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div>
+                </div>
+                <div class="cake-tier tier-mid">
+                  <div class="frosting"></div>
+                  <div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="drip d4"></div>
+                  <div class="decoration">🌸</div>
+                </div>
+                <div class="cake-tier tier-bot">
+                  <div class="frosting"></div>
+                  <div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="drip d4"></div><div class="drip d5"></div>
+                  <div class="decoration">💕</div>
+                </div>
+                <div class="cake-plate"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right inner page: message -->
+          <div class="inner-right">
+            <div class="message-wrap">
+              <p class="msg-greeting">Dearest Iram,</p>
+              <p class="msg-body">
+                Wishing you a day filled with happiness, smiles, love, and beautiful moments.
+                May your year ahead be as wonderful as you are — bright, kind, and full of magic.
+              </p>
+              <p class="msg-close">With all my love 💖</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /card-book -->
+
+      <!-- Swipe hint inside card -->
+      <div class="swipe-hint" id="swipeHint">
+        <span>← Swipe to open →</span>
+      </div>
+    </div><!-- /card-scene -->
+
+  </div><!-- /scene -->
+
+  <!-- Heart particle container -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
