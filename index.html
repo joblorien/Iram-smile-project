@@ -86,7 +86,7 @@ nav{position:fixed;top:0;left:0;right:0;background:var(--nav);backdrop-filter:bl
 @media(max-width:768px){.nav-links{display:none;}.nav-menu-btn{display:block;}.nav-inner{padding-right:calc(4%+58px);}}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 1.5rem 4rem;position:relative;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 1.5rem 4rem;position:relative;}
 .hero-eyebrow{font-size:clamp(.58rem,.9vw+.4rem,.7rem);text-transform:uppercase;letter-spacing:5px;color:var(--pink);margin-bottom:1.5rem;border:1px solid rgba(255,110,180,.3);padding:.4rem 1.4rem;display:inline-block;animation:borderPulse 2s ease-in-out infinite;}
 @keyframes borderPulse{0%,100%{border-color:rgba(255,110,180,.3);box-shadow:none}50%{border-color:rgba(255,110,180,.8);box-shadow:0 0 15px rgba(255,110,180,.3)}}
 .hero-name-wrap{position:relative;display:inline-block;}
@@ -97,9 +97,7 @@ nav{position:fixed;top:0;left:0;right:0;background:var(--nav);backdrop-filter:bl
 .hero-subtitle{font-size:clamp(.9rem,2.5vw,1.1rem);color:var(--lpink);margin-top:2rem;letter-spacing:3px;text-transform:uppercase;}
 [data-theme="light"] .hero-subtitle{color:var(--hot);}
 .hero-date{margin-top:1.5rem;font-size:.8rem;color:var(--t2);letter-spacing:4px;text-transform:uppercase;}
-.hero-inner{display:flex;flex-direction:column;align-items:center;gap:0;}
-
-.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--t2);font-size:.65rem;letter-spacing:3px;text-transform:uppercase;animation:bounce 2s ease-in-out infinite;text-align:center;margin-top:2.5rem;width:100%;}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--t2);font-size:.65rem;letter-spacing:3px;text-transform:uppercase;animation:bounce 2s ease-in-out infinite;text-align:center;margin:2rem auto 0;width:100%;}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--hot),transparent);}
 
@@ -118,6 +116,7 @@ section{max-width:900px;margin:0 auto;padding:6rem 2rem;}
 .photo-frame{display:inline-block;position:relative;margin:0 auto;}
 .photo-placeholder{width:clamp(220px,50vw,280px);height:clamp(220px,50vw,280px);border-radius:50%;background:linear-gradient(135deg,rgba(255,45,120,.15),rgba(255,110,180,.08));border:2px solid rgba(255,45,120,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(255,45,120,.2),inset 0 0 40px rgba(255,45,120,.05);transition:all .4s;cursor:pointer;}
 .photo-placeholder:hover{border-color:var(--hot);box-shadow:0 0 100px rgba(255,45,120,.4);}
+.photo-preview{transition:box-shadow .4s,border-color .4s;}
 .photo-frame:hover .photo-preview{border-color:var(--hot);box-shadow:0 0 55px rgba(255,45,120,.65),0 0 110px rgba(255,45,120,.28),0 0 180px rgba(255,45,120,.1);}
 .photo-placeholder:hover .photo-preview{border-color:var(--hot);box-shadow:0 0 55px rgba(255,45,120,.65),0 0 110px rgba(255,45,120,.28);}
 .photo-placeholder input[type="file"]{display:none;}
@@ -129,7 +128,7 @@ section{max-width:900px;margin:0 auto;padding:6rem 2rem;}
 .photo-ring::after{content:'✦';position:absolute;top:-8px;left:50%;transform:translateX(-50%);color:var(--hot);font-size:1rem;text-shadow:0 0 15px rgba(255,45,120,.8);}
 @keyframes spinRing{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 .photo-ring-2{position:absolute;top:-20px;left:-20px;right:-20px;bottom:-20px;border-radius:50%;border:1px dashed rgba(255,110,180,.15);animation:spinRing 15s linear infinite reverse;}
-.photo-preview{width:clamp(220px,50vw,280px);height:clamp(220px,50vw,280px);border-radius:50%;object-fit:cover;border:2px solid rgba(255,45,120,.6);box-shadow:0 0 80px rgba(255,45,120,.35);transition:box-shadow .4s,border-color .4s;}
+.photo-preview{width:clamp(220px,50vw,280px);height:clamp(220px,50vw,280px);border-radius:50%;object-fit:cover;border:2px solid rgba(255,45,120,.6);box-shadow:0 0 80px rgba(255,45,120,.35);}
 
 /* MESSAGE */
 .message-card{background:var(--card);border:1px solid rgba(255,45,120,.35);padding:clamp(1.5rem,5vw,3.5rem);position:relative;overflow:hidden;backdrop-filter:blur(20px);transition:background .4s,box-shadow .4s,border-color .4s;box-shadow:0 0 40px rgba(255,45,120,.18),0 0 80px rgba(255,45,120,.08),inset 0 0 30px rgba(255,45,120,.04);}
@@ -165,7 +164,7 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
 .footer-heart{font-size:1.5rem;display:block;margin-bottom:1rem;}
 
 @media(max-width:768px){.corner-decor{display:none;}section{padding:4rem 1.2rem;}.reasons-grid{grid-template-columns:1fr 1fr;}#comic-bubble{right:.8rem;bottom:3rem;}.bubble-box{max-width:180px;}.bubble-text{font-size:1.2rem;}}
-@media(max-width:480px){.hero{padding:25vh 1rem 0;}section{padding:3.5rem 1rem;}.reasons-grid{grid-template-columns:1fr;}}
+@media(max-width:480px){.hero{padding:7rem 1rem 3.5rem;}section{padding:3.5rem 1rem;}.reasons-grid{grid-template-columns:1fr;}}
 @media(min-width:1024px){
   body{font-size:1.25rem;}
   .hero-subtitle{font-size:1.45rem;letter-spacing:4px;}
@@ -182,7 +181,8 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
   .nav-links a{font-size:1.05rem;}
   .logo{font-size:1.75rem;}
   footer{font-size:1.05rem;}
-  .scroll-hint{font-size:1rem;}
+  .hero{justify-content:center;}
+  .scroll-hint{font-size:1rem;margin-top:1.5rem;}
   .gsub{font-size:.88rem;}
   .bubble-text{font-size:1.02rem;}
 }
@@ -243,17 +243,15 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
   </nav>
 
   <div class="hero">
-    <div class="hero-inner">
-      <div class="hero-eyebrow">A Little Birthday Surprise</div>
-      <div class="hero-name-wrap">
-        <div class="hero-name">Iram</div>
-        <div class="hero-name-filled">Iram</div>
-      </div>
-      <div class="hero-subtitle">Happy Birthday to Someone Very Special &#128151;</div>
-      <div class="hero-date">&#128149; Made a little something for you &#128149;</div>
-      <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
+    <div class="hero-eyebrow">A Little Birthday Surprise</div>
+    <div class="hero-name-wrap">
+      <div class="hero-name">Iram</div>
+      <div class="hero-name-filled">Iram</div>
     </div>
+    <div class="hero-subtitle">Happy Birthday to Someone Very Special &#128151;</div>
+    <div class="hero-date">&#128149; Made a little something for you &#128149;</div>
   </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
 
   <section id="photo" class="photo-section reveal">
     <div class="section-label">For the most adorable girl</div>
