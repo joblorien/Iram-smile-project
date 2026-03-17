@@ -97,7 +97,7 @@ nav{position:fixed;top:0;left:0;right:0;background:var(--nav);backdrop-filter:bl
 .hero-subtitle{font-size:clamp(.9rem,2.5vw,1.1rem);color:var(--lpink);margin-top:2rem;letter-spacing:3px;text-transform:uppercase;}
 [data-theme="light"] .hero-subtitle{color:var(--hot);}
 .hero-date{margin-top:1.5rem;font-size:.8rem;color:var(--t2);letter-spacing:4px;text-transform:uppercase;}
-.scroll-hint{position:absolute;bottom:3rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--t2);font-size:.65rem;letter-spacing:3px;text-transform:uppercase;animation:bounce 2s ease-in-out infinite;}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--t2);font-size:.65rem;letter-spacing:3px;text-transform:uppercase;animation:bounce 2s ease-in-out infinite;text-align:center;margin:2rem auto 0;width:100%;}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--hot),transparent);}
 
@@ -181,8 +181,8 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
   .nav-links a{font-size:1.05rem;}
   .logo{font-size:1.75rem;}
   footer{font-size:1.05rem;}
-  .hero{justify-content:flex-start;padding-top:18vh;}
-  .scroll-hint{position:static;margin-top:3cm;font-size:1rem;}
+  .hero{justify-content:center;}
+  .scroll-hint{font-size:1rem;margin-top:1.5rem;}
   .gsub{font-size:.88rem;}
   .bubble-text{font-size:1.02rem;}
 }
@@ -250,8 +250,8 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
     </div>
     <div class="hero-subtitle">Happy Birthday to Someone Very Special &#128151;</div>
     <div class="hero-date">&#128149; Made a little something for you &#128149;</div>
-    <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
   </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
 
   <section id="photo" class="photo-section reveal">
     <div class="section-label">For the most adorable girl</div>
@@ -302,7 +302,7 @@ footer{padding:3rem 1.5rem;border-top:1px solid var(--bdr);color:var(--t2);font-
 
   <footer style="text-align:center;">
     <p>Hope this made you smile in the last moments of your birthday.</p>
-    <p style="margin-top:.6rem;">Happy Birthday Iram &#128151;</p>
+    <p style="margin-top:.6rem;">&#128151; Happy Birthday Iram &#128151;</p>
   </footer>
 </div>
 
